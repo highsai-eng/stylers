@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import MyInfoScreen from "../screens/MyInfoScreen";
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -67,10 +68,28 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+const MyInfoStack = createStackNavigator(
+  {
+    MyInfo: MyInfoScreen
+  },
+  config
+);
+
+MyInfoStack.navigationOptions = {
+  title: 'マイページ',
+  tabBarLabel: 'マイページ',
+  tabBarIcon: ({focused}) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+  )
+};
+
+MyInfoStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
+  MyInfoStack
 });
 
 tabNavigator.path = '';
