@@ -80,5 +80,5 @@ yarn start
 
 ### amplify cli のインストール
 ```shell script
-npm install -g @aws-amplify/cli
+yarn global add @aws-amplify/cli
 ```
