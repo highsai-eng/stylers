@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import AppNavigator from './navigation/AppNavigator';
 
-export default function App(props) {
+const App = props => {
   const [isLoadingComplete, setLoadingComplete] = useState(false);
 
   if (!isLoadingComplete && !props.skipLoadingScreen) {
@@ -26,9 +26,9 @@ export default function App(props) {
       </View>
     );
   }
-}
+};
 
-async function loadResourcesAsync() {
+const loadResourcesAsync = async () => {
   await Promise.all([
     Asset.loadAsync([
       require('./assets/images/robot-dev.png'),
@@ -42,17 +42,17 @@ async function loadResourcesAsync() {
       'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
     }),
   ]);
-}
+};
 
-function handleLoadingError(error) {
+const handleLoadingError = error => {
   // In this case, you might want to report the error to your error reporting
   // service, for example Sentry
   console.warn(error);
-}
+};
 
-function handleFinishLoading(setLoadingComplete) {
+const handleFinishLoading = setLoadingComplete => {
   setLoadingComplete(true);
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -60,3 +60,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+export default App;
