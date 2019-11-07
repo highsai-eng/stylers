@@ -63,6 +63,7 @@ git clone https://github.com/highsai-eng/stylers.git
 
 開発用ブランチに切り替えます。
 ```shell script
+cd stylers
 git branch
 git checkout develop/0.1
 ```
