@@ -1,9 +1,12 @@
 # stylers
 Stylers repository.
 
-## 動作環境構築
+## ローカル環境構築
+下記はMacOSでのローカル環境構築手順です。
 
-### Node.js とパッケージマネージャのインストール
+
+## 動作確認
+
 
 ## 動作確認
 ```shell script

@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 });
 
 UserDetailsScreen.navigationOptions = {
-  header: 'マイページ'
+  title: 'マイページ'
 };
 
 export default UserDetailsScreen;

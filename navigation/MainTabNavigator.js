@@ -76,7 +76,7 @@ const UserDetailsStack = createStackNavigator(
 );
 
 UserDetailsStack.navigationOptions = {
-  title: 'マイページ',
+  tabBarLabel: 'マイページ',
   tabBarIcon: ({focused}) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
   )
